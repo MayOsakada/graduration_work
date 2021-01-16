@@ -78,8 +78,13 @@ class InitialController extends Controller
         $schedules->created_at = Carbon::now();
         $schedules->updated_at = Carbon::now();
         $schedules->save(); 
-        return view('schedule',['talent'=> $talent
-        ]);
+        
+        $schedules = new Schedule;
+        //$talent = new Talent; いらない
+        //スケジュールを一覧表示
+        $schedules = \App\Schedule::where('talent_id',$talent->id)->get();
+        
+        return view('schedule', compact('talent', 'schedules'));
     }
     
 }

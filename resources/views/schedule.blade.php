@@ -5,18 +5,18 @@
     <script src="{{ asset('js/fullcalendar-5.5.0')}}"></script>
 @endpush
 @section('content')
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // DOMを取得
-        var calendarEl = document.getElementById('calendar');
+    // <script>
+    //   document.addEventListener('DOMContentLoaded', function() {
+    //     // DOMを取得
+    //     var calendarEl = document.getElementById('calendar');
     
-        // 指定DOMにカレンダープラグインを適用する
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          plugins: [ 'dayGrid' ]
-        });
-        calendar.render();
-      });
-    </script>
+    //     // 指定DOMにカレンダープラグインを適用する
+    //     var calendar = new FullCalendar.Calendar(calendarEl, {
+    //       plugins: [ 'dayGrid' ]
+    //     });
+    //     calendar.render();
+    //   });
+    // </script>
     
     <header>
         <!--ナビゲーションメニュー-->
@@ -39,7 +39,7 @@
             </div>
             <div class="overflow-div">
                 <ul class="list-group list-group-flush">
-                     <div id='calendar'></div>
+                     <!--<div id='calendar'></div>-->
                     @foreach ($schedules as $schedules)
                         <details>
                             <summary><li class="list-group-item">{{ $schedules->date }} {{ $schedules->time }} {{ $schedules->schedule }}</li></summary>

@@ -30,9 +30,9 @@
             <h2 class="sub-title">Register</h2>
         	<form method="POST" action="{{ url('registerdate/'.$talent->id) }}" class="register_container">
                 日付
-                <input type="date" name="date" ></br>
+                <input type="date" name="date"></br>
                 時間
-                <input type="time" name="time" ></br>
+                <input type="time" name="time"></br>
                 カテゴリー
                 <select name="category_id">
                     <option value="">選択してください</option>
